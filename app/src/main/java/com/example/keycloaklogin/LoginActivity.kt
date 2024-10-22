@@ -16,12 +16,13 @@ class LoginActivity : AppCompatActivity() {
 
         val webView = findViewById<WebView>(R.id.webview)
         webView.settings.javaScriptEnabled = true
-        webView.clearCache(true)
-        webView.settings.cacheMode = WebSettings.LOAD_NO_CACHE // Disable caching
+        webView.clearCache(true) // Clear any existing cache
+
+        // Disable caching by setting cache mode to LOAD_NO_CACHE
+        webView.settings.cacheMode = WebSettings.LOAD_NO_CACHE
 
         // Load the Keycloak login URL
-        webView.loadUrl("http://10.0.2.2:8081/login") // Use this for emulator
-
+        webView.loadUrl("http://192.168.252.124:8081/login") // Use the emulator address
 
         // WebViewClient to handle redirection and URL loading
         webView.webViewClient = object : WebViewClient() {
