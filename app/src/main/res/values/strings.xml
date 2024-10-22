@@ -1,0 +1,7 @@
+<resources>
+    <!-- Other strings -->
+    <string name="app_name">MyKeycloakApp</string>
+
+    <!-- String for ID token display -->
+    <string name="id_token_will_be_shown_here">ID Token will be shown here</string>
+</resources>
